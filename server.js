@@ -10,10 +10,7 @@ const mongoURI = "mongodb://127.0.0.1:27017/Urls";
 
 // Connect to MongoDB
 mongoose
-	.connect(mongoURI, {
-		useNewUrlParser: true, // Use the new MongoDB URL parser
-		useUnifiedTopology: true, // Use the new server discovery and monitoring engine
-	})
+	.connect(mongoURI)
 	.then(() => console.log("Connected to MongoDB successfully"))
 	.catch((err) => console.error("Error connecting to MongoDB:", err));
 
